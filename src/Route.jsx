@@ -7,6 +7,7 @@ import Login from "./Login";
 import Register from "./Register";
 import PrivateRoute from "./PrivateRoute";
 import MyCart from "./MyCart";
+import Products from "./Products";
 
 const myCreatedRoute =  createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const myCreatedRoute =  createBrowserRouter([
             {
                 path : "/my cart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
+            },
+            {
+                path : "/products",
+                element: <Products></Products>,
             },
             // {
             //     path : "/donation",

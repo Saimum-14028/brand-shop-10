@@ -1,0 +1,32 @@
+[
+    {
+      "id": "1",
+      "name": "Apple",
+      "image": "https://i.ibb.co/MhWT1VY/pexels-ivan-babydov-7789846.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Samsung",
+        "image": "https://i.ibb.co/8Dxtz1s/pexels-omar-markhieh-1447254.jpg"
+      },
+      {
+        "id": "3",
+        "name": "Xiaomi",
+        "image": "https://i.ibb.co/Mff71Lp/pexels-mustafa-ezz-10902946.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Realme",
+        "image": "https://i.ibb.co/ysW0Gwq/pexels-sanket-mishra-16772285.jpg"
+      },
+      {
+        "id": "5",
+        "name": "HP",
+        "image": "https://i.ibb.co/94vp4FT/pexels-anna-keibalo-17706646.jpg"
+      },
+      {
+        "id": "6",
+        "name": "Intel",
+        "image": "https://i.ibb.co/BtMxkpB/pexels-andrey-matveev-5553596.jpg"
+      }
+]
