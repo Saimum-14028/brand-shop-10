@@ -10,8 +10,8 @@ const AvailableBrands = ({cards}) => {
                 {
                     cards?.map(card=><Link to="/products" key={card.id}>
                             <div className="card card-compact bg-base-100 shadow-xl">
-                                <figure className='h-48'><img src={card.image} alt={card.name} /></figure>
-                                <h2 className="text-center text-2xl font-semibold py-1">{card.name}</h2>
+                                <figure className='h-48'><img src={card.image} alt={card.brand} /></figure>
+                                <h2 className="text-center text-2xl font-semibold py-1">{card.brand}</h2>
                             </div>
                         </Link>
                      )
