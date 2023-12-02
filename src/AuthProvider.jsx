@@ -10,6 +10,7 @@ const AuthProvider = ({ children }) => {
 
     const [user, setUser] = useState({})
     const [loading, setLoading] = useState(true)
+    let result;
 
     // create user 
     const createUser = (email, password) => {
@@ -50,6 +51,13 @@ const AuthProvider = ({ children }) => {
         return signOut(auth)
     }
 
+    // const handleBrand = (key) => {
+    //     console.log(key);
+    //     result=key;
+    //     console.log(result);
+    //     return key;
+    // }
+
     const authInfo = {
         createUser,
         googleLogin,
@@ -58,6 +66,8 @@ const AuthProvider = ({ children }) => {
         user,
         loading,
         handleUpdateProfile
+     //   handleBrand,
+      //  result
     }
 
     return (

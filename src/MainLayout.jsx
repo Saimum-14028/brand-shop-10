@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import { Toaster } from "react-hot-toast";
 
 const MainLayout = () => {
-
     return (
         <div>
             <Navbar></Navbar>
