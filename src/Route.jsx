@@ -13,7 +13,6 @@ import UpdateProduct from "./UpdateProduct";
 
 const myCreatedRoute =  createBrowserRouter([
     {
-
         path : "/",
         element : <MainLayout></MainLayout>,
         errorElement: <ErrorPage></ErrorPage>,
@@ -30,22 +29,22 @@ const myCreatedRoute =  createBrowserRouter([
             {
                 path : "/my cart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/mycart'),
+                loader: () => fetch('https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/mycart'),
             },
             {
                 path : "/products/:id",
                 element: <Products></Products>,
-                loader: () => fetch('http://localhost:5000/products'),
+                loader: () => fetch('https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products'),
             },
             {
                 path: "/product details/:id",
                 element: <PrivateRoute><ProductsCardDetails></ProductsCardDetails></PrivateRoute>,
-                loader: () => fetch('http://localhost:5000/products'),
+                loader: () => fetch('https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products'),
             },
             {
                 path : "/update product/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`),
+                loader: ({params}) => fetch(`https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products/${params.id}`),
             },
 
             {

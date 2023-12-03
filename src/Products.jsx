@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLoaderData, useParams } from 'react-router-dom';
-import { AuthContext } from './AuthProvider';
 import ProductsCard from './ProductsCard';
 
 const Products = () => {
@@ -10,7 +9,7 @@ const Products = () => {
      const products = useLoaderData();
   //   console.log(products);
      const { id } = useParams();
-     console.log(id);
+   //  console.log(id);
      const newProducts = products.filter(product => product.brand === id);
     // console.log(result);
 

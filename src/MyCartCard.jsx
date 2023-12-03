@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Swal from "sweetalert2";
 
 const MyCartCard = ({card,cart,setCart}) => {
 
     const { _id, name, image, brand, price, type, rating, description } = card;
 
-    console.log(card);
+  //  console.log(card);
 
     const handleDelete = _id => {
-        console.log(_id);
+      //  console.log(_id);
         Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -21,7 +21,8 @@ const MyCartCard = ({card,cart,setCart}) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/mycart/${_id}`, {
+                fetch(`https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/mycart/${_id}`, {
+                    'Access-Control-Allow-Origin': '*',
                     method: 'DELETE'
                 })
                     .then(res => res.json())

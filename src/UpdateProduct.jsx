@@ -4,11 +4,11 @@ import swal from 'sweetalert';
 const UpdateProduct = () => {
 
     const singleData = useLoaderData();
-    console.log(singleData);
+    //console.log(singleData);
 
     const handleAddProduct = event => {
+        
         event.preventDefault();
-
         const form = event.target;
 
         const name = form.name.value;
@@ -20,38 +20,23 @@ const UpdateProduct = () => {
 
         const newProduct = { name, image, brand, price, type, rating };
 
-        console.log(newProduct);
+       // console.log(newProduct);
 
-            fetch(`http://localhost:5000/products/${singleData._id}`, {
+            fetch(`https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products/${singleData._id}`, {
                 method: "PUT",
                 headers: {
+                    'Access-Control-Allow-Origin': '*',
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(newProduct),
                 })
                 .then((res) => res.json())
                 .then((data) => {
-                    console.log(data);
+                  //  console.log(data);
                     if(data.modifiedCount || data.upsertedCount){
                         swal("Done!", "Product Updated Successfully!", "success");
                     }
             });
-
-        // send data to the server
-        // fetch('http://localhost:5000/products', {
-        //     method: 'POST',
-        //     headers: {
-        //         'content-type': 'application/json'
-        //     },
-        //     body: JSON.stringify(newProduct)
-        // })
-        //     .then(res => res.json())
-        //     .then(data => {
-        //         console.log(data);
-        //         if(data.insertedId){
-        //             swal("Done!", "Product Added Successfully!", "success");
-        //         }
-        //     })
     }
 
     return (

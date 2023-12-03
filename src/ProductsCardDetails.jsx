@@ -11,7 +11,7 @@ const ProductsCardDetails = () => {
 
     const datas = useLoaderData();
 
-    console.log(datas);
+   // console.log(datas);
 
     useEffect(() => {
         const findproductDetails = datas?.find((data) => data._id === id);
@@ -19,7 +19,7 @@ const ProductsCardDetails = () => {
         setproductDetails(findproductDetails);
     }, [id, datas]);
 
-     console.log(id, productDetails);
+   //  console.log(id, productDetails);
     return (
         <div>
             <ProductDetailsCard productDetails={productDetails}></ProductDetailsCard>

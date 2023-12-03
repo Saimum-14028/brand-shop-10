@@ -5,7 +5,6 @@ const ProductDetailsCard = ({productDetails}) => {
 
     const handleProduct = () => {
         
-
         const name = productDetails.name;
         const image = productDetails.image;
         const brand = productDetails.brand;
@@ -16,19 +15,20 @@ const ProductDetailsCard = ({productDetails}) => {
 
         const newProduct = { name, image, brand, price, type, rating, description };
 
-        console.log(newProduct);
+        //console.log(newProduct);
 
         // send data to the server
-        fetch('http://localhost:5000/mycart', {
+        fetch('https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/mycart', {
             method: 'POST',
             headers: {
+                'Access-Control-Allow-Origin': '*',
                 'content-type': 'application/json'
             },
             body: JSON.stringify(newProduct)
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+               // console.log(data);
                 if(data.insertedId){
                     swal("Done!", "Product Added to Your Cart!", "success");
                 }
