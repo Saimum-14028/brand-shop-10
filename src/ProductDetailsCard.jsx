@@ -22,7 +22,7 @@ const ProductDetailsCard = ({productDetails}) => {
             method: 'POST',
            // mode: 'no-cors',
             headers: {
-                'content-type': 'application/json',
+                'content-type': 'application/json'
               //  'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(newProduct)

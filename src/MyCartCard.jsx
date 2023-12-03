@@ -22,12 +22,8 @@ const MyCartCard = ({card,cart,setCart}) => {
 
 
                 fetch(`https://itchy-bonnet-jay.cyclic.app/mycart/${_id}`, {
-                    method: 'DELETE',
+                    method: 'DELETE'
                   //  mode: 'no-cors',
-                    headers: {
-                        'content-type': 'application/json',
-                      //  'Access-Control-Allow-Origin': '*',
-                    },
                 })
                     .then(res => res.json())
                     .then(data => {

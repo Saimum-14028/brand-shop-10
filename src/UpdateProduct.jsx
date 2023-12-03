@@ -22,14 +22,14 @@ const UpdateProduct = () => {
 
        // console.log(newProduct);
 
-            fetch(`https://itchy-bonnet-jay.cyclic.app/${singleData._id}`, {
+            fetch(`https://itchy-bonnet-jay.cyclic.app/products/${singleData._id}`, {
                 method: "PUT",
               //  mode: 'no-cors',
                 headers: {
-                    'content-type': 'application/json',
+                    'content-type': 'application/json'
                   //  'Access-Control-Allow-Origin': '*',
                 },
-                body: JSON.stringify(newProduct),
+                body: JSON.stringify(newProduct)
                 })
                 .then((res) => res.json())
                 .then((data) => {
