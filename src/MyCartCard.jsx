@@ -21,7 +21,7 @@ const MyCartCard = ({card,cart,setCart}) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/mycart/${_id}`, {
+                fetch(`http://localhost:5000/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

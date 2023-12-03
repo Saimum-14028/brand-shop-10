@@ -5,7 +5,7 @@ const ProductsCard = ({card}) => {
     return (
         <div className="w-11/12 mx-auto">
             <div className="card card-compact bg-base-100 shadow-xl">
-                <figure><img src={card.image} alt={card.name} /></figure>
+                <figure className='h-40'><img src={card.image} alt={card.name} /></figure>
                 <div className="card-body">
                 <h2 className="card-title">{card.name}</h2>
                 <p className='text-xl font-semibold'>{card.brand}</p>
