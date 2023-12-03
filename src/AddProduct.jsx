@@ -20,11 +20,12 @@ const AddProduct = () => {
       //  console.log(newProduct);
 
         // send data to the server
-        fetch('https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products', {
+        fetch('https://itchy-bonnet-jay.cyclic.app/products', {
             method: 'POST',
+            //mode: 'no-cors',
             headers: {
-                'Access-Control-Allow-Origin': '*',
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                //'Access-Control-Allow-Origin': '*',
             },
             body: JSON.stringify(newProduct)
         })

@@ -21,9 +21,13 @@ const MyCartCard = ({card,cart,setCart}) => {
             if (result.isConfirmed) {
 
 
-                fetch(`https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/mycart/${_id}`, {
-                    'Access-Control-Allow-Origin': '*',
-                    method: 'DELETE'
+                fetch(`https://itchy-bonnet-jay.cyclic.app/mycart/${_id}`, {
+                    method: 'DELETE',
+                  //  mode: 'no-cors',
+                    headers: {
+                        'content-type': 'application/json',
+                      //  'Access-Control-Allow-Origin': '*',
+                    },
                 })
                     .then(res => res.json())
                     .then(data => {

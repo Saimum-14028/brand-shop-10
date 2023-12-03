@@ -29,22 +29,22 @@ const myCreatedRoute =  createBrowserRouter([
             {
                 path : "/my cart",
                 element: <PrivateRoute><MyCart></MyCart></PrivateRoute>,
-                loader: () => fetch('https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/mycart'),
+                loader: () => fetch('https://itchy-bonnet-jay.cyclic.app/mycart'),
             },
             {
                 path : "/products/:id",
                 element: <Products></Products>,
-                loader: () => fetch('https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products'),
+                loader: () => fetch('https://itchy-bonnet-jay.cyclic.app/products'),
             },
             {
                 path: "/product details/:id",
                 element: <PrivateRoute><ProductsCardDetails></ProductsCardDetails></PrivateRoute>,
-                loader: () => fetch('https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products'),
+                loader: () => fetch('https://itchy-bonnet-jay.cyclic.app/products'),
             },
             {
                 path : "/update product/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({params}) => fetch(`https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products/${params.id}`),
+                loader: ({params}) => fetch(`https://itchy-bonnet-jay.cyclic.app/products/${params.id}`),
             },
 
             {

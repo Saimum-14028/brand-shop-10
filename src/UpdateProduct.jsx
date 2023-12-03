@@ -22,11 +22,12 @@ const UpdateProduct = () => {
 
        // console.log(newProduct);
 
-            fetch(`https://my-brand-shop-server-side-7g41jsnva-saimum-140128s-projects.vercel.app/products/${singleData._id}`, {
+            fetch(`https://itchy-bonnet-jay.cyclic.app/${singleData._id}`, {
                 method: "PUT",
+              //  mode: 'no-cors',
                 headers: {
-                    'Access-Control-Allow-Origin': '*',
-                    "Content-Type": "application/json",
+                    'content-type': 'application/json',
+                  //  'Access-Control-Allow-Origin': '*',
                 },
                 body: JSON.stringify(newProduct),
                 })
